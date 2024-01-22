@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c280683b-d72c-4271-b32c-7085480c6565" name="Changes" comment="Primo commit classi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classi/Medico.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classi/Medico.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Finestre/HomeMedico.py" beforeDir="false" afterPath="$PROJECT_DIR$/Finestre/HomeMedico.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Finestre/ProfiloMedico.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +118,7 @@
       <workItem from="1705680695670" duration="44000" />
       <workItem from="1705680746293" duration="10000" />
       <workItem from="1705680764927" duration="995000" />
-      <workItem from="1705932264039" duration="9784000" />
+      <workItem from="1705932264039" duration="10729000" />
     </task>
     <task id="LOCAL-00001" summary="prova">
       <created>1705680803848</created>
@@ -145,7 +143,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705937249005</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Primo commit classi">
+      <option name="closed" value="true" />
+      <created>1705942830519</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705942830519</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Primo commit classi">
+      <option name="closed" value="true" />
+      <created>1705942963454</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705942963454</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
