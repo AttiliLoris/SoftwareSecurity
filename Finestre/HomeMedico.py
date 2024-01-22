@@ -1,8 +1,6 @@
-import Classi.Medico
 import PySimpleGUI as sg
 from Classi import Medico
 from Classi import Fascicolo
-from FascicoloPaziente import fascicoloPaziente
 
 def homeMedico(medico):
     sg.theme('DarkAmber')   # Add a touch of color
