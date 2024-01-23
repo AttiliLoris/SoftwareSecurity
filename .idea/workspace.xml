@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c280683b-d72c-4271-b32c-7085480c6565" name="Changes" comment="Aggiornamento GUI Medico">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Finestre/HomeMedico.py" beforeDir="false" afterPath="$PROJECT_DIR$/Finestre/HomeMedico.py" afterDir="false" />
-    </list>
+    <list default="true" id="c280683b-d72c-4271-b32c-7085480c6565" name="Changes" comment="Aggiornamento GUI Medico" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,8 +28,6 @@
     }
   ],
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;author&quot;: &quot;AttiliLoris&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">
@@ -119,7 +114,7 @@
       <workItem from="1705680746293" duration="10000" />
       <workItem from="1705680764927" duration="995000" />
       <workItem from="1705932264039" duration="11942000" />
-      <workItem from="1705999805933" duration="938000" />
+      <workItem from="1705999805933" duration="1075000" />
     </task>
     <task id="LOCAL-00001" summary="prova">
       <created>1705680803848</created>
@@ -168,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705944917297</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Aggiornamento GUI Medico">
+      <option name="closed" value="true" />
+      <created>1706000832321</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1706000832321</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,8 +207,8 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SoftwareSecurity$main.coverage" NAME="main Coverage Results" MODIFIED="1705934280070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SoftwareSecurity$HomeMedico.coverage" NAME="HomeMedico Coverage Results" MODIFIED="1705944889954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Finestre" />
+    <SUITE FILE_PATH="coverage/SoftwareSecurity$main.coverage" NAME="main Coverage Results" MODIFIED="1706000695935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SoftwareSecurity$HomeMedico.coverage" NAME="HomeMedico Coverage Results" MODIFIED="1706000708127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Finestre" />
     <SUITE FILE_PATH="coverage/SoftwareSecurity$ProfiloMedico.coverage" NAME="ProfiloMedico Coverage Results" MODIFIED="1705941761979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Finestre" />
   </component>
 </project>

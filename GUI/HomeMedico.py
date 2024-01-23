@@ -1,7 +1,6 @@
 import PySimpleGUI as sg
-from Classi import Medico
-from Classi import Fascicolo
-from Classi import Paziente
+import Logica
+
 def homeMedico(medico):
     sg.theme('DarkAmber')
     layoutHome = [[sg.Text('Inserire il codice fiscale di un paziente per vedere il suo fascicolo'), sg.InputText()],
