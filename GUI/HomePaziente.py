@@ -27,7 +27,7 @@ def visualizzaCartellaClinica(paziente):
         [sg.Text(f'Cartella di {paziente.nome} {paziente.cognome}')],
         [sg.Text(f'Nome: {paziente.nome}')],
         [sg.Text(f'Cognome: {paziente.cognome}')],
-        [sg.Text(f'Età: {paziente.eta}')],
+        [sg.Text(f'Codice fiscale: {paziente.codiceFiscale}')],
         [sg.Button('Chiudi')]
     ]
 
