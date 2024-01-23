@@ -70,7 +70,7 @@ def fascicoloPaziente(paziente, fascicolo, windowHome):
                         [sg.Text('Prescrizioni: '), sg.Text(fascicolo.prescrizioni)],
                         [sg.Button('Home'), sg.Button('Modifica storia clinica'), sg.Button('Modifica prescrizioni')]]
 
-    windowFascicolo = sg.Window('Home', layoutFascicolo)
+    windowFascicolo = sg.Window('Fascicolo '+ paziente.nome +' '+  paziente.cognome, layoutFascicolo)
 
     while True:
         event, values = windowFascicolo.read()
@@ -78,7 +78,7 @@ def fascicoloPaziente(paziente, fascicolo, windowHome):
             break
         if event == 'Modifica storia clinica':
             windowFascicolo.Hide()
-            modificaStoriaClinica(fascicolo)
+            modificaStoriaClinica(fascicolo, windowFascicolo)
         if event == 'Modifica prescrizioni':
             windowFascicolo.Hide()
             modificaPrescrizioni(fascicolo)
@@ -89,7 +89,24 @@ def fascicoloPaziente(paziente, fascicolo, windowHome):
 
 
 
-def modificaStoriaClinica(fascicolo):
-    pass
-def modificaPrescizioni(fascicolo):
+def modificaStoriaClinica(fascicolo, windowFascicolo):
+    layoutModificaStoria = [[sg.Text('Storia clinica: '), sg.InputText(fascicolo.storiaClinica)]
+                            [sg.Button('Conferma'), Sg.Button('Indietro')]]
+    windowModificaStoria = sg.Window('Dettaglio', layoutModificaStoria)
+
+    while True:
+        event, testo = windowModificaStoria.read()
+        if event == sg.WIN_CLOSED:
+            break
+        if event == 'Conferma':
+            if testo =='':
+                sg.popup_error('Il testo è vuoto, modifiche non valide')
+            else:
+                fascicolo.storiaClinica(testo)
+                break
+        if event == 'Indietro':
+            break
+    windowModificaStoria.close()
+    windowFascicolo.UnHide()
+def modificaPrescrizioni(fascicolo):
     pass
