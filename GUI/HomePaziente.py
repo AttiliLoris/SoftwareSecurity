@@ -1,3 +1,4 @@
+import PySimpleGUI as sg
 def homePaziente(paziente):
     sg.theme('DarkAmber')
 
@@ -14,7 +15,8 @@ def homePaziente(paziente):
         if event == sg.WINDOW_CLOSED:
             break
         elif event == 'Visualizza cartella clinica':
-            visualizzaCartellaClinica(paziente)
+            cartella = ricercaCartella(paziente.codiceFiscale)
+            visualizzaCartellaClinica(paziente, cartella)
         elif event == 'Modifica profilo':
             modificaProfilo(paziente)
 
@@ -22,12 +24,16 @@ def homePaziente(paziente):
 
 def visualizzaCartellaClinica(paziente):
     sg.theme('DarkAmber')
-
+    cartella = ricercaCartella(paziente.codiceFiscale)
     layout = [
         [sg.Text(f'Cartella di {paziente.nome} {paziente.cognome}')],
         [sg.Text(f'Nome: {paziente.nome}')],
         [sg.Text(f'Cognome: {paziente.cognome}')],
         [sg.Text(f'Codice fiscale: {paziente.codiceFiscale}')],
+        [sg.Text('Prescrizioni:')],
+        [sg.Listbox(values=cartella.prescrizioni, size=(30, 5))],
+        [sg.Text('Note:')],
+        [sg.Listbox(values=cartella.note, size=(30, 5))],
         [sg.Button('Chiudi')]
     ]
 
@@ -42,4 +48,7 @@ def visualizzaCartellaClinica(paziente):
     windowCartellaClinica.close()
 
 def modificaProfilo(paziente):
+    pass
+
+def ricercaCartella(codiceFiscale):
     pass

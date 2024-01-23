@@ -16,6 +16,9 @@ def homeInfermiere(infermiere):
 
         if event == sg.WINDOW_CLOSED or event == 'Indietro':
             break
+        elif event == 'Profilo':
+            windowHome.Hide()
+            profiloInfermire(infermiere, windowHome)
         elif event == 'Ok':
             paziente = ricercaPaziente(codiceFiscale)
             cartella = ricercaCartella(codiceFiscale)
@@ -31,13 +34,14 @@ def cartellaPaziente(paziente, cartella, windowHome):
 
     layout = [
         [sg.Text(f'Cartella di {paziente.nome} {paziente.cognome}')],
-        [sg.Text(f'Dati Paziente:')],
         [sg.Text(f'Nome: {paziente.nome}')],
         [sg.Text(f'Cognome: {paziente.cognome}')],
-        [sg.Text(f'Età: {paziente.età}')],
+        [sg.Text(f'Codice fiscale: {paziente.codiceFiscale}')],
+        [sg.Text('Prescrizioni:')],
+        [sg.Listbox(values=cartella.prescrizioni, size=(30, 5))],
         [sg.Text('Note:')],
-        [sg.Listbox(values=paziente.note, size=(30, 5)), sg.Button('Aggiungi nota')], #vettore non funzionerà mai così
-        [sg.Button('Chiudi'), sg.Button('Conferma')]
+        [sg.Listbox(values=cartella.note, size=(30, 5))],
+        [sg.Button('Chiudi'), sg.Button('Aggiungi nota'), sg.Button('Conferma'), sg.Button('Home')]
     ]
 
     windowCartella = sg.Window('Cartella Paziente', layout)
@@ -47,15 +51,21 @@ def cartellaPaziente(paziente, cartella, windowHome):
 
         if event == sg.WINDOW_CLOSED or event == 'Chiudi':
             break
+        elif event == 'Conferma':
+            confermaCure(paziente,cartella) #non so come ma conferma di aver adto le cure che il medico
+                                            #ha scritto nelle prescrizioni
         elif event == 'Aggiungi':
             nota_inserita = values['nota_input']
             if nota_inserita:
-                aggiungiNotaPaziente(paziente,cartella)
+                aggiungiNotaPaziente(paziente,cartella, windowCartella)
+
+        elif event == 'Home':
+            windowHome.UnHide()
+            break
 
     windowCartella.close()
-    windowHome.UnHide()
 
-def aggiungiNotaPaziente(paziente,cartella):
+def aggiungiNotaPaziente(paziente,cartella, windowCartella):
     sg.theme('DarkAmber')
 
     layout = [
@@ -82,9 +92,31 @@ def aggiungiNotaPaziente(paziente,cartella):
 
     windowAggiungiNota.close()
 
+def profiloInfermiere(infermiere, windowHome):
+    layoutProfilo = [[sg.Text(f'Nome: {infermiere.nome}')],
+        [sg.Text(f'Cognome: {infermiere.cognome}')],
+        [sg.Text(f'Codice fiscale: {infermiere.codiceFiscale}')],
+              [sg.Button('Home')]]
+
+    windowProfilo = sg.Window('Home', layoutProfilo)
+
+    while True:
+        event, valoriInput = windowProfilo.read()  # SANIFICARE
+        if event == sg.WIN_CLOSED:
+            break
+        if event == 'Home':
+            windowHome.UnHide()
+            break
+    windowProfilo.close()
+    windowHome.UnHide()
+
+
 def ricercaPaziente(codiceFiscale):
     pass
 
 def ricercaCartella(codiceFiscale):
+    pass
+
+def confermaCure(paziente, cartella):
     pass
 
